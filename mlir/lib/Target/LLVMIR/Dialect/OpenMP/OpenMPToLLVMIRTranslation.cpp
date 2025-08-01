@@ -3890,6 +3890,9 @@ static void collectMapDataFromMapOperands(
   }
 }
 
+// remember to remove the movebefore that might have been added in one of the
+// PRs and is now deprecated...
+
 static int getMapDataMemberIdx(MapInfoData &mapData, omp::MapInfoOp memberOp) {
   auto *res = llvm::find(mapData.MapClause, memberOp);
   assert(res != mapData.MapClause.end() &&
