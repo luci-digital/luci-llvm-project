@@ -3947,7 +3947,7 @@ static void sortMapIndices(llvm::SmallVectorImpl<size_t> &indices,
 
 static omp::MapInfoOp getFirstOrLastMappedMemberPtr(omp::MapInfoOp mapInfo,
                                                     bool first) {
-  ArrayAttr indexAttr = mapInfo.getMembersIndexAttr();
+  mlir::ArrayAttr indexAttr = mapInfo.getMembersIndexAttr();
   // Only 1 member has been mapped, we can return it.
   if (indexAttr.size() == 1)
     return cast<omp::MapInfoOp>(mapInfo.getMembers()[0].getDefiningOp());
