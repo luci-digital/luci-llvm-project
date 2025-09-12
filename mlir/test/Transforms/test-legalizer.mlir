@@ -371,7 +371,6 @@ func.func @convert_detached_signature() {
 
 // -----
 
-// CHECK: notifyOperationReplaced: test.erase_op
 // CHECK: notifyOperationErased: test.dummy_op_lvl_2
 // CHECK: notifyBlockErased
 // CHECK: notifyOperationErased: test.dummy_op_lvl_1
